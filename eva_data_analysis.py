@@ -1,7 +1,7 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open("/Users/cmmorri/Codes/spacewalks/data.json", "r")
+data_f = open("eva-data.json", "r")
 data_t = open(
-    "/Users/cmmorri/Codes/spacewalks/astronaut-data-analysis-old/Extra-vehicular_Activity__EVA__-_US_and_Russia_20240126.csv",
+    "eva-data.csv",
     "w",
 )
 g_file = 'myplot.png'
