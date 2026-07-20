@@ -1,7 +1,7 @@
 # https://data.nasa.gov/resource/eva.json (with modifications)
-data_f = open("eva-data.json", "r")
+data_f = open('./eva-data.json', "r")
 data_t = open(
-    "eva-data.csv",
+    './eva-data.csv',
     "w",
 )
 g_file = 'myplot.png'
