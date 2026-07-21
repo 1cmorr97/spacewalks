@@ -8,6 +8,10 @@ output_file = open("./eva-data.csv", "w", encoding="utf-8")
 graph_file = "./cumulative_eva_graph.png"
 
 # read in data
+'''
+Python now discourages inplace data changes, the inplace arg is the same as
+when I do df = df...
+'''
 eva_df = pd.read_json(input_file, convert_dates=["date"], encoding="ascii")
 eva_df["eva"] = eva_df["eva"].astype(float)
 eva_df.dropna(axis=0, subset=["duration", "date"], inplace=True)
