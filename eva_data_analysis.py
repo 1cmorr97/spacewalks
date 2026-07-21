@@ -11,8 +11,6 @@ output_file = open(
 )
 graph_file = 'myplot.png'
 
-fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
-
 data = []
 
 for i in range(375):
