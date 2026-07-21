@@ -37,12 +37,13 @@ for i in data:
         if duration == '':
             pass
         else:
-            eva_t = dt.datetime.strptime(duration, '%H:%M')
+            time_dt = dt.datetime.strptime(duration, '%H:%M')
             deltaT = dt.timedelta(
-                hours=eva_t.hour,
-                minutes=eva_t.minute,
-                seconds=eva_t.second).total_seconds() / (60 * 60)
-            print(eva_t, deltaT)
+                hours=time_dt.hour,
+                minutes=time_dt.minute,
+                seconds=time_dt.second
+            ).total_seconds() / (60 * 60)
+            print(time_dt, deltaT)
             time.append(deltaT)
             if 'date' in data[j].keys():
                 date.append(dt.datetime.strptime(data[j]['date'][0:10], '%Y-%m-%d'))
@@ -52,14 +53,14 @@ for i in data:
                 time.pop(0)
     j += 1
 
-eva_t = [0]
+time_dt = [0]
 for i in time:
-    eva_t.append(eva_t[-1] + i)
+    time_dt.append(time_dt[-1] + i)
 
 date, time = zip(*sorted(zip(date, time)))
 
 
-plt.plot(date, eva_t[1:], "ko-")
+plt.plot(date, time_dt[1:], "ko-")
 plt.xlabel('Year')
 plt.ylabel('Total time spent in space to date (hours)')
 plt.tight_layout()
