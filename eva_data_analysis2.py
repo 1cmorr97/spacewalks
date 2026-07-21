@@ -20,6 +20,7 @@ eva_df.dropna(axis=0, subset=["duration", "date"], inplace=True)
 eva_df.to_csv(output_file, index=False, encoding="utf-8")
 
 # process data
+# TODO: add comment on the lambda function
 eva_df.sort_values("date", inplace=True)
 eva_df["duration_hours"] = (
     eva_df["duration"].str.split(":").apply(lambda x: int(x[0]) + int(x[1]) / 60)
