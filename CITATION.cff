@@ -1,0 +1,19 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Spacewalks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Cassie
+    family-names: Morris
+identifiers:
+  - type: url
+    value: 'https://github.com/1cmorr97/spacewalks'
+repository-code: 'https://github.com/1cmorr97/spacewalks'
+keywords:
+  - Nasa
+  - Extravehicular activity
